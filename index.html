@@ -10,21 +10,38 @@
             margin: 0;
             padding: 0;
             color: #333;
+            display: flex;
         }
-        header {
+        /* Sidebar Styles */
+        .sidebar {
+            width: 250px;
+            height: 100vh;
             background: #333;
             color: #fff;
-            padding: 1em 0;
-            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
         }
-        nav a {
+        .sidebar a {
             color: #fff;
-            margin: 0 15px;
+            display: block;
             text-decoration: none;
+            padding: 10px 0;
             font-weight: bold;
         }
+        .sidebar a:hover {
+            background: #444;
+        }
+        /* Main Content Styles */
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            width: calc(100% - 250px);
+        }
         section {
-            padding: 2em;
+            padding: 2em 0;
             margin: 0 auto;
             max-width: 900px;
         }
@@ -37,70 +54,63 @@
             text-align: center;
             padding: 1em 0;
             position: absolute;
-            width: 100%;
+            width: calc(100% - 250px);
+            margin-left: 250px;
             bottom: 0;
-        }
-        .nav-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        .nav-container a {
-            text-decoration: none;
-            color: #fff;
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav class="nav-container">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#expertise">Expertise</a>
-            <a href="#experience">Experience</a>
-            <a href="#education">Education</a>
-            <a href="#achievements">Achievements</a>
-            <a href="#social-work">Social Work</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-    <section id="home">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Discover my work and achievements.</p>
-    </section>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Write a brief introduction about yourself here.</p>
-    </section>
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <p>Showcase your projects and work samples here.</p>
-    </section>
-    <section id="expertise">
-        <h2>Expertise</h2>
-        <p>Detail your skills and areas of expertise here.</p>
-    </section>
-    <section id="experience">
-        <h2>Experience</h2>
-        <p>Outline your work experience and notable positions held here.</p>
-    </section>
-    <section id="education">
-        <h2>Education</h2>
-        <p>List your academic qualifications and institutions here.</p>
-    </section>
-    <section id="achievements">
-        <h2>Achievements</h2>
-        <p>Highlight your accomplishments and awards here.</p>
-    </section>
-    <section id="social-work">
-        <h2>Social Work</h2>
-        <p>Share your involvement in community service or social initiatives here.</p>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Provide your contact details or a contact form here.</p>
-    </section>
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#social-work">Social Work</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div class="content">
+        <section id="home">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Discover my work and achievements.</p>
+        </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Write a brief introduction about yourself here.</p>
+        </section>
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <p>Showcase your projects and work samples here.</p>
+        </section>
+        <section id="expertise">
+            <h2>Expertise</h2>
+            <p>Detail your skills and areas of expertise here.</p>
+        </section>
+        <section id="experience">
+            <h2>Experience</h2>
+            <p>Outline your work experience and notable positions held here.</p>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <p>List your academic qualifications and institutions here.</p>
+        </section>
+        <section id="achievements">
+            <h2>Achievements</h2>
+            <p>Highlight your accomplishments and awards here.</p>
+        </section>
+        <section id="social-work">
+            <h2>Social Work</h2>
+            <p>Share your involvement in community service or social initiatives here.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Provide your contact details or a contact form here.</p>
+        </section>
+    </div>
     <footer>
         <p>&copy; 2024 Your Name. All rights reserved.</p>
     </footer>
