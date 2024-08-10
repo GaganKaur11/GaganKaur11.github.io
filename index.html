@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website</title>
+    <title>Gagandeep Kaur | Portfolio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,26 +14,69 @@
         }
         /* Sidebar Styles */
         .sidebar {
-            width: 250px;
-            height: 100vh;
-            background: #333;
-            color: #fff;
-            position: fixed;
-            top: 0;
-            left: 0;
-            padding: 20px;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-        }
-        .sidebar a {
-            color: #fff;
-            display: block;
-            text-decoration: none;
-            padding: 10px 0;
-            font-weight: bold;
-        }
-        .sidebar a:hover {
-            background: #444;
-        }
+    width: 250px;
+    height: 100%;
+    background-color: #d3d3d3;  
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.sidebar h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #ff9f00; /* Accent color for the heading */
+}
+
+.sidebar a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align all items horizontally */
+    text-align: center; 
+}
+
+.sidebar a:hover,
+.sidebar a:focus {
+    background-color: #ff9f00; /* Accent color for hover */
+ /*   color: #333;  */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.sidebar a.active {
+    background-color: #ff6f00; /* Different color for active link */
+    font-weight: bold;
+}
+
+/* Optional: Add a logo or additional branding */
+.sidebar .logo {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .logo img {
+    max-width: 100%;
+    height: auto;
+}
+.sidebar .profile img {
+    border-radius: 50%;
+    width: 200px; /* Reduced size */
+    height: 200px; /* Reduced size */
+    object-fit: cover;
+    border: 2px solid #ff9f00; /* Accent border color */
+}
         /* Main Content Styles */
         .content {
             margin-left: 250px;
@@ -58,29 +101,255 @@
             margin-left: 250px;
             bottom: 0;
         }
+        .sidebar .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* Space between icons */
+    margin-top: 20px;
+}
+
+.sidebar .social-media a {
+    display: inline-block;
+    width: 30px; /* Smaller size for icons */
+    height: 30px; /* Smaller size for icons */
+  /*  border-radius: 50%;*/
+    background-color: transparent; /* Light background color for icons */
+   /* padding: 4px; /* Padding to center the icons */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.sidebar .social-media a img {
+    width: 20px; /* Smaller size for icons */
+    height: 20px; /* Smaller size for icons */
+    display: block;
+    margin: auto;
+    transition: transform 0.3s;
+}
+
+.sidebar .social-media a:hover {
+    background-color: #ddd; /* Change background on hover */
+}
+
+.sidebar .social-media a:hover img {
+    transform: scale(1.1); /* Slightly enlarge icons on hover */
+}
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #ff9f00; /* Accent color */
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+    border: 1px solid transparent; /* Add border if desired */
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #ff6f00; /* Darker accent color for hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+.special-heading {
+            font-size: 2.5em; /* Increase font size */
+            font-weight: bold; /* Make the font bold */
+            color: #444; /* Change text color */
+          
+            padding: 20px 0; /* Add vertical padding */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+            font-family: 'Arial', sans-serif; /* Specify the font family */
+            letter-spacing: 1px; /* Add spacing between letters */
+        }
+        /* Card Container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;  
+    gap: 20px; /* Space between cards */
+   justify-content: center; /* Center-align cards */ 
+}
+
+/* Card Styles */
+.card {
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Image */
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Card Content */
+.card-content {
+    padding: 20px;
+}
+
+/* Card Title */
+.card-title {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+/* Card Description */
+.card-description {
+    font-size: 1em;
+    color: #666;
+    margin: 0 0 20px;
+}
+
+/* Card Button */
+.card-button {
+    display: inline-block;  
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #ff9f00;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.card-button:hover,
+.card-button:focus {
+    background-color: #ff6f00;
+    transform: scale(1.05);
+}
+/* Form Styles */
+.form-container {
+    display: flex;
+    justify-content: flex-end; /* Align form to the right */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+   width: 50%;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #ff9f00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.contact-form button:hover,
+.contact-form button:focus {
+    background-color: #ff6f00;
+    transform: scale(1.05);
+}
+/* Contact Info Styles */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.contact-item a {
+    color: #ff9f00;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+.certificates {
+    max-width: 450px; /* Limit the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures it behaves as a block element */
+    margin: 0 auto; /* Center-align the image horizontally */
+    border: 2px solid #ff9f00; /* Optional: Add a border with accent color */
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Shadow for better appearance */
+}
+
     </style>
 </head>
 <body>
     <div class="sidebar">
-        <h2>Menu</h2>
+        <div class="profile">
+            <img src="C:\Users\GAGANDEEP KAUR\Documents\ResumeCV\Portfolio\Images\pic.jpeg" alt="Profile Picture">
+        </div>
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#expertise">Expertise</a>
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
+        <a href="#testimonials">Testimonials</a>
         <a href="#achievements">Achievements</a>
         <a href="#social-work">Social Work</a>
         <a href="#contact">Contact</a>
+        <div class="social-media">
+            <a href="https://gmail.com" target="_blank"><img src="C:\Users\GAGANDEEP KAUR\Documents\ResumeCV\Portfolio\Images\gmail.png" alt="Gmail"></a>
+            <a href="https://linkedin.com" target="_blank"><img src="C:\Users\GAGANDEEP KAUR\Documents\ResumeCV\Portfolio\Images\linkedin.png" alt="LinkedIn"></a>
+            <a href="https://instagram.com" target="_blank"><img src="C:\Users\GAGANDEEP KAUR\Documents\ResumeCV\Portfolio\Images\instagram.png" alt="Instagram"></a>
+            <!-- Add more social media icons as needed -->
+        </div>
     </div>
     <div class="content">
         <section id="home">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Discover my work and achievements.</p>
+            <h1 class="special-heading">Hi, I'm Gagan</h1>
+            
+            <div class="button-container">
+                <a href="#contact" class="btn">Download my Resume</a>
+            </div>
         </section>
+        
         <section id="about">
-            <h2>About Me</h2>
-            <p>Write a brief introduction about yourself here.</p>
+            <h3>About Me</h3>
+            <h2>Who Am I</h2>
+            <p>Hi, I'm Gagan. I'm currently pursuing a Master's degree in Computer Science at Purdue University, with a keen interest in becoming a Product Manager. With over three years of experience collaborating across diverse, multinational teams, I am dedicated to driving optimization and fostering innovation. My approach is always mindful and inclusive, adding value to every project I undertake.
+
+                Beyond my professional life, I am passionate about travel, adventure, and fashion. I also enjoy exploring spirituality and embracing new experiences.</p>
         </section>
         <section id="portfolio">
             <h2>Portfolio</h2>
@@ -89,30 +358,155 @@
         <section id="expertise">
             <h2>Expertise</h2>
             <p>Detail your skills and areas of expertise here.</p>
+             <!-- Card Container -->
+    <div class="card-container">
+        <!-- Card Item 1 -->
+        <div class="card">
+           
+            <div class="card-content">
+                <h3 class="card-title">Project Management Skillset</h3>
+                <p class="card-description">This is a brief description of the project. Highlight key aspects and achievements.</p>
+                
+            </div>
+        </div>
+        
+        <!-- Card Item 2 -->
+        <div class="card">
+            
+            <div class="card-content">
+                <h3 class="card-title">Software Development</h3>
+                <p class="card-description">This is a brief description of another project. Highlight key aspects and achievements.</p>
+               
+            </div>
+        </div>
+         <!-- Card Item 1 -->
+         <div class="card">
+           
+            <div class="card-content">
+                <h3 class="card-title">Interpersonal Skills</h3>
+                <p class="card-description">This is a brief description of the project. Highlight key aspects and achievements.</p>
+                
+            </div>
+        </div>
+        
+        <!-- Add more cards as needed -->
+    </div>
+
         </section>
         <section id="experience">
             <h2>Experience</h2>
-            <p>Outline your work experience and notable positions held here.</p>
+            <div class="card-container">
+                <!-- Card Item 1 -->
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="card-title">Rathburn Tool & Manufacturing</h3>
+                        <p class="card-date">Data Analyst and Storyteller 02/2024 - 05/2024</p>
+                        <ul class="card-description">
+                            <li>Organized & cleaned raw data from various sources using Python.</li>
+                            <li>Interpreted data, created narratives, and presented findings engagingly and understandably in reports.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Card Item 2 -->
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="card-title">SEAVAC (USA) L.L.C.</h3>
+                        <p class="card-date">Data Analysis UX Design Lead 09/2023 - 12/2023</p>
+                        <ul class="card-description">
+                            <li>Designed and developed a data analysis dashboard, enabling agile responses to market trends, resulting in a 15% increase in revenue growth and expanded customer base.</li>
+                            <li>Streamlined data analysis processes and optimized usability using Plotly Dash and Python, leading to a 25% reduction in operational costs, increased overall profitability.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Card Item 3 -->
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="card-title">Accenture, Gurugram</h3>
+                        <p class="card-date">Associate Software Engineer November 2020 - Present</p>
+                        <ul class="card-description">
+                            <li>Working as an Associate Software Engineer with African Bank. Developing automated unit tests for GUI, Rest API test scripts in SAP & Postman for different payments functionalities such as Forex, using UFT, Selenium, and Java.</li>
+                            <li>Automated handling of batches, single script executing for multiple data scenarios.</li>
+                            <li>Running health checks, Adhoc regression, and integration testing.</li>
+                            <li>Creating technical artifacts, handling test plans, and raising defects in HP QC/ALM and tracking them to closure.</li>
+                            <li>Awarded twice with Accenture Celebrates Excellence (ACE) for being a high performer and value delivered to the client organization. Also, awarded as People Experience Champion for taking steps to collaborate with the team.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Card Item 4 -->
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="card-title">Training & Placement Cell, GNDEC</h3>
+                        <p class="card-date">Web Developer 08/2019 - 12/2019</p>
+                        <ul class="card-description">
+                            <li>Automated manual processes, like alumni outreach and placement drive forms, for the Training and Placement (T&P) Cell, saving significant time and effort, allowing focus on strategic initiatives to enhance student placements and industry partnerships.</li>
+                            <li>Enhanced user experience and visual appeal of the T&P Cell’s online platform by working on the front end using Java and Bootstrap, resulting in increased engagement and satisfaction for students and recruiters.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
+
         <section id="education">
             <h2>Education</h2>
-            <p>List your academic qualifications and institutions here.</p>
+            <p>Masters in Computer Science - GPA: 4/4 Aug 2023 - May 2025
+                Purdue University, Fort Wayne
+                Related Coursework: Software Engineering, Heuristics, Software Testing, Human Computer Interaction, Analysis
+                of Algorithms</p>
+
+            <p>Bachelors of Computer Science and Technology - GPA: 3.7/4 Aug 2023 - Dec 2024
+                Guru Nanak Dev Engineering College, Ludhiana
+                Related Coursework: Data Structures and Algorithms, Software Engineering, Database System, Operating Systems,
+                Computer Organization, Machine Learning, Computer Networks, Object Oriented Programming</p>
         </section>
+
+        <section id="testimonials">
+            <h2>Testimonials</h2>
+            <p>She worked as a Web and App developer for Training & Placement Cell, GNDEC. Based on the analysis of work flow for encouraged Placements, added various features.Headed with new IT team for TNP cell for the next batch.Successful completion of 6 months training in TNP Cell 
+                Sachin Bagga
+                Assistant Professor at Guru Nanak Dev Engineering College, Ludhiana</p>
+        </section>
+
         <section id="achievements">
             <h2>Achievements</h2>
             <p>Highlight your accomplishments and awards here.</p>
+            <img src="C:\Users\GAGANDEEP KAUR\Documents\ResumeCV\Portfolio\Images\AccentureACE2.jpeg" alt="Location Icon" class="certificates">
+            <img src="C:\Users\GAGANDEEP KAUR\Documents\ResumeCV\Portfolio\Images\AccentureACE1_page-0001.jpg" alt="Location Icon" class="certificates">
+            <img src="C:\Users\GAGANDEEP KAUR\Documents\ResumeCV\Portfolio\Images\Google_ProjectManagment_page-0001.jpg" alt="Location Icon" class="certificates">
+            <img src="C:\Users\GAGANDEEP KAUR\Documents\ResumeCV\Portfolio\Images\ISTQB_page-0001.jpg" alt="Location Icon" class="certificates">
         </section>
+
         <section id="social-work">
             <h2>Social Work</h2>
             <p>Share your involvement in community service or social initiatives here.</p>
         </section>
         <section id="contact">
             <h2>Contact</h2>
-            <p>Provide your contact details or a contact form here.</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <img src="C:\Users\GAGANDEEP KAUR\Documents\ResumeCV\Portfolio\Images\mailbox.png" alt="Email Icon" class="contact-icon">
+                    <a href="mailto:your-email@example.com">gagankaur1808@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <img src="C:\Users\GAGANDEEP KAUR\Documents\ResumeCV\Portfolio\Images\location.png" alt="Location Icon" class="contact-icon">
+                    <p>Fort Wayne, IN</p>
+                </div>
+            </div>
+            <form class="contact-form" action="mailto:your-email@example.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+        
+                <button type="submit">Send Message</button>
+            </form>
         </section>
     </div>
-    <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
-    </footer>
 </body>
 </html>
